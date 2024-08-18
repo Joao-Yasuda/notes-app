@@ -6,4 +6,4 @@ const notesDateSchema = new mongoose.Schema({
   priority: Boolean
 })
 
-module.exports = mongoose.model('notes', notesDateSchema)
+module.exports = mongoose.model('Notes', notesDateSchema)

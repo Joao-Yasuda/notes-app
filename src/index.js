@@ -1,12 +1,10 @@
 const express = require("express")
+const routes = require('./routes') 
+const cors = require('cors')
+
 const app = express()
 require("./config/dbconfig")
-
+app.use(cors())
 app.use(express.json())
-
-app.get('/', (req, res)=>{
-  return res.json({
-    name:"gabriel"
-  })
-})
+app.use(routes)
 app.listen(8080)
